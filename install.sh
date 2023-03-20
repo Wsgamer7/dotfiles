@@ -1,6 +1,5 @@
 #!/bin/bash
-files=".bashrc .gitconfig .vimrc"
-for file in $files
-do
-	ln -s ~/dotfiles/$file ~/$file
-done
+ln -sf ~/dotfiles/runcom/.bashrc ~
+ln -sf ~/dotfiles/runcom/.bash_profile ~
+ln -sf ~/dotfiles/runcom/.inputrc ~
+ln -sf ~/dotfiles/git/.gitconfig ~
