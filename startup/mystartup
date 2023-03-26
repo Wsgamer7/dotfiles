@@ -1,11 +1,8 @@
+#! /bin/bash
 #add your script to start up here
 
-#clash
-clash() {
-	cd /opt/clash/
-	./cfw &
-}
-clash
+swap esc and capslock
+#sh ~/dotfiles/startup/swapEscCap.sh
 
 #mem
 open https://mem.ai/home/added-by-me &

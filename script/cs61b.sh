@@ -1,15 +1,17 @@
 #! /usr/bin/zsh
 
-xdotool key Ctrl+Super+Left
+xdotool key Ctrl+Super+j
 google-chrome https://www.vocabulary.com/ &
 sleep 0.8
-xdotool key Super+Up
+xdotool key Super+k
+xdotool key Super+k
 
-xdotool key Ctrl+Super+Right
+xdotool key Ctrl+Super+k
 google-chrome --new-window https://sp18.datastructur.es/ &  
+xdotool key Super+k
+xdotool key Super+k
 sleep 0.8
-xdotool key Super+Up
 
 
-xdotool key Ctrl+Super+Right
-sh /opt/idea-IC-222.4167.29/bin/idea.sh
+xdotool key Ctrl+Super+k
+idea

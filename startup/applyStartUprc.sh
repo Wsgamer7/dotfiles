@@ -1,2 +1,2 @@
 #! /bin/bash
-sudo ln -sf ~/dotfiles/startup/mystartUprc.sh /etc/init.d/
+#bad impelement sudo ln -sf ~/dotfiles/startup/mystartup /usr/local/bin/mystartup.service
