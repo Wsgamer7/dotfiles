@@ -1,0 +1,15 @@
+{
+ "configVer": "1.0",
+ "syncTaskList": [
+  {
+   "name": "all backups",
+   "id": "d6faff58-a41b-44f6-bbbb-a012788e0412",
+   "userId": "865ab17ebac94849ba5a367d01706dde",
+   "localFolderPath": "/home/ws/Documents/couldSync",
+   "panFolderPath": "/couldSync",
+   "mode": "download",
+   "priority": "time",
+   "lastSyncTime": "2023-03-29 16:15:59"
+  }
+ ]
+}

@@ -1,4 +1,6 @@
 #! /bin/bash
+
+#usage in linuxmint: use startup application in start menu
 #add your script to start up here
 
 swap esc and capslock
@@ -6,3 +8,6 @@ swap esc and capslock
 
 #mem
 open https://mem.ai/home/added-by-me &
+
+#aliCould sync
+#aliyunpan sync start
