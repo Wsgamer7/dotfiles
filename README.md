@@ -1,3 +1,1 @@
-First, open Firstclash(dic)
-Second, run dotfiles/install.sh
-
+ws's dotfiles	
