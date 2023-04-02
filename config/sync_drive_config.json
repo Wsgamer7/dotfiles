@@ -7,7 +7,7 @@
    "userId": "865ab17ebac94849ba5a367d01706dde",
    "localFolderPath": "/home/ws/Documents/couldSync",
    "panFolderPath": "/couldSync",
-   "mode": "download",
+   "mode": "sync",
    "priority": "time",
    "lastSyncTime": "2023-03-29 16:15:59"
   }
