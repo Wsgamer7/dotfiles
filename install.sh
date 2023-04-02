@@ -1,6 +1,8 @@
+#! /bin/bash
 # install by all installer recursively
-for installer in ~/dotfiles/{runcom,installApp,config,startup}/install.sh; do
-    sudo bash installer
+bash ~/dotfiles/config/clash/install.sh
+for fold in runcom startup config; do
+    bash ~/dotfiles/$fold/install.sh
 done
 
 #undo

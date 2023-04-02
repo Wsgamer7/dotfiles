@@ -14,10 +14,6 @@ pip3 install tldr
 tldr -u
 ln -s $(which fdfind) ~/.local/bin/fd
 
-#install flatpack
-sudo apt install flatpak
-sudo flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
-
 #install by git
 cd ~/Download/
 
