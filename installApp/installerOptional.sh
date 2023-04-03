@@ -1,5 +1,5 @@
 # use after set proxy
-cd ~/Download/
+cd ~/Downloads/
 sudo apt-get update
 sudo apt -y upgrade
 

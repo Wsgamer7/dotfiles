@@ -4,7 +4,7 @@ sudo apt-get install ibus-rime
 #config by : https://github.com/jayknoxqu/ibus-rime
 ibus restart
 
-cd ~/Download/
+cd ~/Downloads/
 # 下载配置文件
 git clone https://github.com/jayknoxqu/ibus-rime.git
 
