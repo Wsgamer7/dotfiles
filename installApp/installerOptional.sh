@@ -5,7 +5,7 @@ sudo apt -y upgrade
 
 #steam
 sudo add-apt-repository multiverse
-sudo apt install steam
+sudo apt install -y steam
 
 #R
 sudo apt -y install r-base
@@ -34,7 +34,7 @@ sudo dpkg -i yesplaymusic_0.4.7_amd64.deb
 
 #rhythmbox
 sudo add-apt-repository ppa:ubuntuhandbook1/rhythmbox
-sudo apt Install rhythmbox
+sudo apt install rhythmbox
 
 #vlc
 sudo apt install vlc -y
