@@ -4,7 +4,7 @@ cd ~/Documents/app/
 sudo add-apt-repository ppa:aacebedo/fasd
 sudo apt-get update
 
-aptList="xdotool fasd flameshot zsh tmux python3-pip fd-find neovim curl ripgrep mosh kitty wget"
+aptList="fasd flameshot zsh tmux python3-pip fd-find neovim curl ripgrep mosh kitty wget"
 sudo apt-get install -y $aptList
 
 #need to set a key to use flameshot
