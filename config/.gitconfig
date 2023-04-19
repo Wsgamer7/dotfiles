@@ -3,4 +3,6 @@
 	email = ws18022@outlook.com
 [alias]
 	st = status
-	visual = log --all --graph --decorate
+	graph = log --all --graph --decorate
+[core]
+	excludesfile = /home/ws/.gitignore_global

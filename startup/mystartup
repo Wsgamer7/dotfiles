@@ -9,8 +9,8 @@ swap esc and capslock
 #mem
 open https://mem.ai/home/added-by-me &
 
-#aliCould sync
-#aliyunpan sync start
-
 #tldr get entries
 tldr -u
+
+#aliCould sync
+aliyunpan sync start

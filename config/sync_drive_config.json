@@ -2,14 +2,34 @@
  "configVer": "1.0",
  "syncTaskList": [
   {
-   "name": "all backups",
-   "id": "d6faff58-a41b-44f6-bbbb-a012788e0412",
+   "name": "wsTree",
+   "id": "980faf66-eb86-46c4-a0db-4c94d7c47333",
    "userId": "865ab17ebac94849ba5a367d01706dde",
-   "localFolderPath": "/home/ws/Documents/couldSync",
-   "panFolderPath": "/couldSync",
-   "mode": "sync",
+   "localFolderPath": "/home/ws/Documents/wsTree",
+   "panFolderPath": "/wsTree",
+   "mode": "download",
    "priority": "time",
-   "lastSyncTime": "2023-03-29 16:15:59"
+   "lastSyncTime": "2023-04-18 19:08:41"
+  },
+  {
+   "name": "listening",
+   "id": "20b94830-1475-437b-9e63-fbcef2533792",
+   "userId": "865ab17ebac94849ba5a367d01706dde",
+   "localFolderPath": "/home/ws/Documents/listening",
+   "panFolderPath": "/listening",
+   "mode": "download",
+   "priority": "time",
+   "lastSyncTime": "2023-04-18 19:08:41"
+  },
+  {
+   "name": "pictures",
+   "id": "09b85f91-1610-4728-b445-99390a1d9939",
+   "userId": "865ab17ebac94849ba5a367d01706dde",
+   "localFolderPath": "/home/ws/Documents/pictures",
+   "panFolderPath": "/pictures",
+   "mode": "download",
+   "priority": "time",
+   "lastSyncTime": "2023-04-18 19:08:41"
   }
  ]
 }

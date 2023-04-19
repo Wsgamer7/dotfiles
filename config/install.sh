@@ -13,4 +13,7 @@ ln -sf ~/dotfiles/config/.vimrc ~/
 #tmux
 ln -sf ~/dotfiles/config/.tmux.conf ~/
 #git
+git config --global core.excludesfile ~/.gitignore_global
+
+ln -sf ~/dotfiles/config/.gitignore_global ~/
 ln -sf ~/dotfiles/config/.gitconfig ~/
