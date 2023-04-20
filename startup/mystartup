@@ -7,7 +7,7 @@ swap esc and capslock
 #sh ~/dotfiles/startup/swapEscCap.sh
 
 #mem
-open https://mem.ai/home/added-by-me &
+#open https://mem.ai/home/added-by-me &
 
 #tldr get entries
 tldr -u
