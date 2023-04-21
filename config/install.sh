@@ -5,6 +5,7 @@ ln -sf ~/dotfiles/config/sync_drive_config.json /etc/aliyunpan/sync_drive/sync_d
 #clash
 sh ~/dotfiles/config/clash/install.sh
 #pip3
+mkdir -p ~/.config/pip
 ln -sf ~/dotfiles/config/pip.conf ~/.config/pip/pip.conf
 #--------------dotfiles located at ~/ --------------------
 

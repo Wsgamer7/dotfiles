@@ -3,14 +3,14 @@
 #usage in linuxmint: use startup application in start menu
 #add your script to start up here
 
-swap esc and capslock
-#sh ~/dotfiles/startup/swapEscCap.sh
+#swap esc and capslock
+sh ~/dotfiles/startup/swapEscCap.sh
 
 #mem
-#open https://mem.ai/home/added-by-me &
+open https://mem.ai/home/added-by-me &
 
 #tldr get entries
 tldr -u
 
 #aliCould sync
-aliyunpan sync start
+#aliyunpan sync start

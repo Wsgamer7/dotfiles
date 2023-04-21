@@ -13,5 +13,5 @@ ibus-daemon -drx
 
 ibus restart
 
-echo "you need add input method in system setting"
+echo "you need add input method in system setting -- [keybord]"
 echo "see $tech, if you fail"
