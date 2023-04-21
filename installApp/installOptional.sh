@@ -3,7 +3,7 @@
 #add source
 sudo add-apt-repository multiverse
 
-appsPreferred="linuxqq flameshot google-chrome-stable r-base rstudio"
+appsPreferred="linuxqq flameshot r-base rstudio"
 #appsPlay="steam wemeet gimp yesplaymusic rhythmbox"
 
 sudo apt install -y $appsPreferred
