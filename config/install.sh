@@ -1,9 +1,13 @@
 #ssh
 ln -sf ~/dotfiles/config/.ssh/config ~/.ssh/
-#aliyunpan
-ln -sf ~/dotfiles/config/sync_drive_config.json /etc/aliyunpan/sync_drive/sync_drive_config.json
+
+#aliyunpan (add config env varible : see dotfile/.env)
+mkdir -p ~/.config/aliyunpan
+sudo ln -sf $(pwd)/sync_drive_config.json ~/.config/aliyunpan/
+
 #clash
 sh ~/dotfiles/config/clash/install.sh
+
 #pip3
 mkdir -p ~/.config/pip
 ln -sf ~/dotfiles/config/pip.conf ~/.config/pip/pip.conf
