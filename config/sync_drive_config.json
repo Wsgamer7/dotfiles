@@ -10,26 +10,6 @@
    "mode": "download",
    "priority": "time",
    "lastSyncTime": "2023-04-18 19:08:41"
-  },
-  {
-   "name": "listening",
-   "id": "20b94830-1475-437b-9e63-fbcef2533792",
-   "userId": "865ab17ebac94849ba5a367d01706dde",
-   "localFolderPath": "/home/ws/Documents/listening",
-   "panFolderPath": "/listening",
-   "mode": "download",
-   "priority": "time",
-   "lastSyncTime": "2023-04-18 19:08:41"
-  },
-  {
-   "name": "pictures",
-   "id": "09b85f91-1610-4728-b445-99390a1d9939",
-   "userId": "865ab17ebac94849ba5a367d01706dde",
-   "localFolderPath": "/home/ws/Documents/pictures",
-   "panFolderPath": "/pictures",
-   "mode": "download",
-   "priority": "time",
-   "lastSyncTime": "2023-04-18 19:08:41"
   }
  ]
 }

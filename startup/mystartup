@@ -3,18 +3,20 @@
 #usage in linuxmint: use startup application in start menu
 #add your script to start up here
 
+#swap esc and capslock(only for x11)
+#sh ~/dotfiles/startup/swapEscCap.sh
+
+#mount share
+sh ~/dotfiles/startup/mountShare.sh
 
 #mem
-open https://mem.ai/home/added-by-me &
+#open https://mem.ai/home/added-by-me &
+###################################
+################LONG_TIME##########
+###################################
 
 #tldr get entries
 tldr -u
 
 #aliCould sync
-#aliyunpan sync start
-
-#swap esc and capslock
-sh ~/dotfiles/startup/swapEscCap.sh
-
-#mount share
-sh ~/dotfiles/startup/mountShare.sh
+aliyunpan sync start
