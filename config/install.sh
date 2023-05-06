@@ -13,8 +13,6 @@ mkdir -p ~/.config/pip
 ln -sf ~/dotfiles/config/pip.conf ~/.config/pip/pip.conf
 #--------------dotfiles located at ~/ --------------------
 
-#vim
-ln -sf ~/dotfiles/config/.vimrc ~/
 #tmux
 ln -sf ~/dotfiles/config/.tmux.conf ~/
 #git
