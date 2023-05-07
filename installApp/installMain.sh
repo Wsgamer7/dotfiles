@@ -2,14 +2,12 @@ mkdir ~/Documents/app
 cd ~/Documents/app/
 #source for fasd
 sudo add-apt-repository ppa:aacebedo/fasd
-sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
 
-aptList="fasd alacritty fzf zsh tmux python3-pip fd-find neovim curl ripgrep mosh wget nodejs npm "
+aptList="fasd kitty fzf zsh tmux python3-pip fd-find neovim curl ripgrep mosh wget nodejs npm "
 sudo apt-get install -y $aptList
 
-#need to set a key to use flameshot
-#map PrtSc -> /usr/bin/flameshot gui
 pip3 install tldr
 tldr -u
 ln -s $(which fdfind) ~/.local/bin/fd
