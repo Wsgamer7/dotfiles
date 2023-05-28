@@ -1,5 +1,5 @@
 #open https://github.com/Fndroid/clash_for_windows_pkg/releases
-mkdir ~/Documents/app
+mkdir -p ~/Documents/app
 cd ~/Documents/app/
 wget https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.21/Clash.for.Windows-0.20.21-x64-linux.tar.gz
 tar xvf Clash*.tar.gz
