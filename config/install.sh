@@ -1,12 +1,17 @@
+#IDEA
+sh ~/dotfiles/config/idea/install.sh
+
 #ssh
-ln -sf ~/dotfiles/config/.ssh/config ~/.ssh/
+mkdir -p ~/.ssh
+ln -sf ~/dotfiles/config/ssh_config ~/.ssh/config
 
 #aliyunpan (add config env varible : see dotfile/.env)
 mkdir -p ~/.config/aliyunpan
-ln -sf $(pwd)/sync_drive_config.json ~/.config/aliyunpan/sync_drive/
+ln -sf $~/dotfiles/alipan_conf.json ~/.config/aliyunpan/sync_drive/sync_drive_config.json
 
 #clash
-sh ~/dotfiles/config/clash/install.sh
+mkdir -p ~/.config/clash/profiles
+ln -sf ~/dotfiles/config/clash_conf.yaml ~/.config/clash/profiles/online_config.yaml
 
 #pip3
 mkdir -p ~/.config/pip
@@ -21,5 +26,4 @@ git config --global core.excludesfile ~/.gitignore_global
 ln -sf ~/dotfiles/config/.gitignore_global ~/
 ln -sf ~/dotfiles/config/.gitconfig ~/
 
-#IDEA
-ln -sf ~/dotfiles/config/idea/maven_settings.xml ~/.m2/settings.xml
+

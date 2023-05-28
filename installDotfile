@@ -1,5 +1,5 @@
 #! /bin/bash
-for fold in runcom startup config; do
+for fold in shell startup config; do
     bash ~/dotfiles/$fold/install.sh
 done
 

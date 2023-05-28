@@ -2,7 +2,7 @@ mkdir ~/Documents/app
 cd ~/Documents/app/
 #source for fasd
 sudo add-apt-repository ppa:aacebedo/fasd
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
 
 aptList="fasd kitty fzf zsh tmux python3-pip fd-find neovim curl ripgrep mosh wget nodejs npm "
