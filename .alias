@@ -17,8 +17,10 @@ startupPath="~/dotfiles/startup/"
 alias cs61b="sh ${scriptPath}cs61b.sh"
 alias novel="sh ${scriptPath}novel.sh"
 alias swapEscCap="sh ${startupPath}swapEscCap.sh"
-alias lightServer="101.43.252.41"
 alias aliSync="aliyunpan sync start"
 alias bfg="java -jar ~/Documents/app/bfg*.jar"
+<<<<<<< HEAD
 alias lndesk="sh ${scriptPath}link_to_desktop.sh"
 alias mouse="sudo udevadm trigger"
+=======
+>>>>>>> 88ab1bee0eb27f172add39e88c3b61e58e183666
