@@ -4,6 +4,6 @@
 [alias]
 	st = status
 	graph = log --all --graph --decorate
-	add-commit = !git add -A && git commit -m
+	addcommit = !git add -A && git commit -m
 [core]
 	excludesfile = /home/ws/.gitignore_global
