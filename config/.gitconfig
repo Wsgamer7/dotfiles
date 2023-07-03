@@ -3,7 +3,8 @@
 	email = ws18022@outlook.com
 [alias]
 	st = status
-	graph = log --all --graph --decorate
 	addcommit = !git add -A && git commit -m
+	pullmain = pull origin main
+	newbranch = checkout -b 
 [core]
 	excludesfile = /home/ws/.gitignore_global
