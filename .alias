@@ -13,6 +13,7 @@ alias ux="chmod u+x"
 alias lg="lazygit"
 alias gac="git addcommit"
 alias sopen="fzf | xargs open"
+alias mountWin="sudo mount /dev/nvme0n1p3 /home/ws/Documents/win10"
 
 alias typ="open https://www.typingtom.com/lessons/basic/home-row/6"
 scriptPath="~/dotfiles/script/"

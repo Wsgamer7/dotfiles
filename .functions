@@ -1,4 +1,4 @@
-# Create a new directory and enter it
+#Create a new directory and enter it
 function mk() {
   mkdir -p "$@" && cd "$@"
 }
@@ -16,30 +16,27 @@ aliUp() {
 	aliyunpan upload $1 /temp
 }
 
-lnpath() {
-	sudo ln -s $(pwd)/$1 /home/ws/.local/bin
+ln2path() {
+	local target_file=$1
+	# Check if the target file exists
+  	if [ ! -f "$target_file" ]; then
+    		echo "Error: Target file does not exist."
+    	return 1
+  	fi
+	ln -s $(pwd)/$target_file /home/ws/.local/bin
 }
 
 ln2desk() {
-	file_name=$1 # Get the first argument as filename
-
-    # Get the absolute path of the file
-    path=$(pwd)/$file_name  
-
-    # Ensure the path exists
-    if [ -e $path ] 
-    then
-        # Get the desktop directory path
-        desktop_path=$(xdg-user-dir DESKTOP)
-
-        # Get the full path of the desktop link
-        link_path=$desktop_path/$file_name
-
-        # Create the desktop link
-        ln -s $path $link_path
-
-        echo "Link created successfully!" 
-    else 
-        echo "The given path does not exist. Try again."
-    fi
+	local target_file=$1
+	# Check if the target file exists
+  	if [ ! -f "$target_file" ]; then
+    		echo "Error: Target file does not exist."
+    	return 1
+  	fi
+	ln -s $(pwd)/$target_file /home/ws/Desktop
+}
+proj3_diff() {
+	python3 binary_to_hex_cpu.py $1 > student.out
+	python3 binary_to_hex_cpu.py $2 > reference.out
+	diff student.out reference.out
 }
