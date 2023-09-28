@@ -6,5 +6,6 @@
 	addcommit = !git add -A && git commit -m
 	pullmain = pull origin main
 	newbranch = checkout -b 
+	discard = reset --hard
 [core]
 	excludesfile = /home/ws/.gitignore_global

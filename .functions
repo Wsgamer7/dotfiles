@@ -40,3 +40,17 @@ proj3_diff() {
 	python3 binary_to_hex_cpu.py $2 > reference.out
 	diff student.out reference.out
 }
+
+databaseURL() {
+	url='const mongoConnectionURL = "mongodb+srv://wsgamer7:catbookwsgamer7@cluster0.cykbnuq.mongodb.net/?retryWrites=true&w=majority";'
+  	name='const databaseName = "Cluster0";'
+	echo $url
+	echo $name
+}
+kill_lisener() {
+	kill -9 $(lsof -ti:$1)
+}
+
+rename_recur() {
+	echo "fd js | xargs rename '/s/\.js$/\.ts/'"
+}
