@@ -19,4 +19,5 @@ sh ~/dotfiles/startup/mountShare.sh
 tldr -u
 
 #aliCould sync
-aliyunpan sync start
+#aliyunpan sync start
+

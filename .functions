@@ -52,5 +52,6 @@ kill_lisener() {
 }
 
 rename_recur() {
-	echo "fd js | xargs rename '/s/\.js$/\.ts/'"
+	echo "fd js | xargs rename 's/\.js$/\.ts/'"
 }
+
