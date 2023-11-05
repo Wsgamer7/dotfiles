@@ -20,6 +20,8 @@ ln -sf ~/dotfiles/config/pip.conf ~/.config/pip/pip.conf
 
 #tmux
 ln -sf ~/dotfiles/config/.tmux.conf ~/
+ln -sf ~/dotfiles/config/.tmux.conf.local ~/
+
 #git
 git config --global core.excludesfile ~/.gitignore_global
 
