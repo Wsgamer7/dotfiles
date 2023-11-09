@@ -1,7 +1,0 @@
-#tx_root has been banned
-
-Host cs144
-	User cs144
-	HostName localhost
-	IdentityFile ~/.ssh/id_ed25519
-	Port 2222
