@@ -23,7 +23,7 @@ ln2path() {
     		echo "Error: Target file does not exist."
     	return 1
   	fi
-	ln -s $(pwd)/$target_file /home/ws/.local/bin
+	ln -s $(pwd)/$target_file $HOME/.local/bin
 }
 
 ln2desk() {
@@ -33,7 +33,7 @@ ln2desk() {
     		echo "Error: Target file does not exist."
     	return 1
   	fi
-	ln -s $(pwd)/$target_file /home/ws/Desktop
+	ln -s $(pwd)/$target_file $HOME/Desktop
 }
 proj3_diff() {
 	python3 binary_to_hex_cpu.py $1 > student.out

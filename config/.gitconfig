@@ -8,4 +8,4 @@
 	newbranch = checkout -b 
 	discard = reset --hard
 [core]
-	excludesfile = /home/ws/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
