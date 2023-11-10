@@ -54,4 +54,6 @@ kill_lisener() {
 rename_recur() {
 	echo "fd js | xargs rename 's/\.js$/\.ts/'"
 }
-
+str2md5() {
+	echo -n $1 | md5sum
+}

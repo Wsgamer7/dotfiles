@@ -28,4 +28,5 @@ git config --global core.excludesfile ~/.gitignore_global
 ln -sf ~/dotfiles/config/.gitignore_global ~/
 ln -sf ~/dotfiles/config/.gitconfig ~/
 
-
+#docker
+sh $HOME/dotfiles/config/docker/install.sh
