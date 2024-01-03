@@ -1,6 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="af-magic"
+zstyle ':omz:update' mode disabled
 
 source $ZSH/oh-my-zsh.sh
 

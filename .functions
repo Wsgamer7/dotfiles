@@ -12,6 +12,10 @@ gitnewBranch() {
 	git checkout -b $1 main
 }
 
+psqlWith() {
+	sudo -u $1 psql
+}
+
 aliUp() {
 	aliyunpan upload $1 /temp
 }
