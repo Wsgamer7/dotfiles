@@ -1,26 +1,28 @@
-!/bin/bash
+#!/bin/bash
 ln -sf ~/dotfiles/.bashrc ~
 ln -sf ~/dotfiles/.zshrc ~
 ln -sf ~/dotfiles/.bash_profile ~
 
 bash ~/dotfiles/config/install.sh
 
+homePath=$HOME
 #Optional
-isNewSystem=false
-haveGUI=false
-inChina=false
+isNewSystem=true
+haveGUI=true
+inChina=true
 inCloud=false
-swapEscCaps=false
-dualSystem=false
-need_rust=false
-need_js=false
-need_c=false
-need_go=false
-need_postgresql=false
-need_miniconda=false
+swapEscCaps=true
+dualSystem=true
+need_rust=true
+need_js=true
+need_c=true
+need_go=true
+need_postgresql=true
+need_miniconda=true
 
 #################################
-scriptPath="~/dotfiles/script/"
+scriptPath="${homePath}/dotfiles/script/"
+echo $scriptPath
 install_program_env() {
     if $need_rust; then
         bash ${scriptPath}rust_env.sh
