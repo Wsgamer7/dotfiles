@@ -17,6 +17,7 @@ need_js=false
 need_c=false
 need_go=false
 need_postgresql=false
+need_miniconda=false
 
 #################################
 scriptPath="~/dotfiles/script/"
@@ -39,6 +40,9 @@ install_program_env() {
 
     if $need_postgresql; then
         bash ${scriptPath}postgresql_env.sh
+    fi
+    if $need_miniconda; then
+        bash ${scriptPath}miniconda.sh
     fi
 }
 
