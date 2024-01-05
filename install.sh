@@ -7,7 +7,7 @@ bash ~/dotfiles/config/install.sh
 
 homePath=$HOME
 #Optional
-isNewSystem=true
+isNewSystem=false
 haveGUI=true
 inChina=true
 inCloud=false
@@ -18,6 +18,7 @@ need_js=true
 need_c=true
 need_go=true
 need_postgresql=true
+need_docker=true
 need_miniconda=true
 
 #################################
@@ -42,6 +43,9 @@ install_program_env() {
 
     if $need_postgresql; then
         bash ${scriptPath}postgresql_env.sh
+    fi
+    if $need_docker; then
+        bash ${scriptPath}docker_env.sh
     fi
     if $need_miniconda; then
         bash ${scriptPath}miniconda.sh
