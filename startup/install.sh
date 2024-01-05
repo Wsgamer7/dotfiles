@@ -1,1 +1,0 @@
-sh ~/dotfiles/startup/mystartup

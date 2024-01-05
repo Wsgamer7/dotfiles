@@ -1,7 +1,3 @@
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 alias vi="nvim"
 alias dc="cd"
 alias la="ls -a"
@@ -26,10 +22,5 @@ alias add_alias="vi ~/dotfiles/.alias; source ~/dotfiles/.alias"
 alias add_function="vi ~/dotfiles/.functions; source ~/dotfiles/.functions"
 #alias hadoop="/usr/local/hadoop/bin/hadoop"
 
-alias typ="open https://www.typingtom.com/lessons/basic/home-row/6"
-scriptPath="~/dotfiles/script/"
-startupPath="~/dotfiles/startup/"
-alias cs61b="sh ${scriptPath}cs61b.sh"
-alias novel="sh ${scriptPath}novel.sh"
 alias aliSync="aliyunpan sync start"
 alias bfg="java -jar ~/Documents/app/bfg*.jar"
