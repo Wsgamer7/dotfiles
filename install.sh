@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 ln -sf ~/dotfiles/.bashrc ~
 ln -sf ~/dotfiles/.zshrc ~
 ln -sf ~/dotfiles/.bash_profile ~
@@ -6,16 +6,63 @@ ln -sf ~/dotfiles/.bash_profile ~
 bash ~/dotfiles/config/install.sh
 
 #Optional
-isNewSystem=False
-haveGUI=False
-inCloud=False
-swapEscCaps=False
-dualSystem=False
-inChina=False
-need_rust=False
-need_js=False
-need_c=False
-need_go=False
-need_postgresSql=False
+isNewSystem=false
+haveGUI=false
+inCloud=false
+swapEscCaps=false
+dualSystem=false
+inChina=false
+need_rust=false
+need_js=false
+need_c=false
+need_go=false
+need_postgresql=false
 
+#################################
 scriptPath="~/dotfiles/script/"
+install_program_env() {
+    if $need_rust; then
+        bash ${scriptPath}rust_env.sh
+    fi
+
+    if $need_js; then
+        bash ${scriptPath}js_env.sh
+    fi
+
+    if $need_c; then
+        bash ${scriptPath}c_env.sh
+    fi
+
+    if $need_go; then
+        bash ${scriptPath}go_env.sh
+    fi
+
+    if $need_postgresql; then
+        bash ${scriptPath}postgresql_env.sh
+    fi
+}
+
+if $isNewSystem; then
+    echo "installing new system"
+    bash ${scriptPath}gene_ssh_key.sh
+
+    if $inChina; then
+        bash ${scriptPath}cnSource.sh
+    fi
+
+    bash ${scriptPath}terminalApps.sh
+
+    install_program_env
+
+    if $haveGUI; then
+        bash ${scriptPath}gui_app.sh
+        bash ${scriptPath}swapEscCap.sh
+        if $inChina; then
+            bash ${scriptPath}inputMethod.sh
+        fi
+    fi
+
+    if $dualSystem; then
+        bash ${scriptPath}fixTime2sys.sh
+    fi
+fi
