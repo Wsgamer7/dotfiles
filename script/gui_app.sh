@@ -1,3 +1,5 @@
+
+echo "=======installing gui app========="
 mkdir -p ~/Documents/app
 cd ~/Documents/app/
 sudo add-apt-repository multiverse

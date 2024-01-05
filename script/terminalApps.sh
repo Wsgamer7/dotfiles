@@ -1,3 +1,4 @@
+echo "=======installing teminal apps========="
 #source for fasd
 sudo add-apt-repository ppa:aacebedo/fasd
 sudo add-apt-repository ppa:neovim-ppa/unstable

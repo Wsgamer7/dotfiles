@@ -8,10 +8,10 @@ bash ~/dotfiles/config/install.sh
 #Optional
 isNewSystem=false
 haveGUI=false
+inChina=false
 inCloud=false
 swapEscCaps=false
 dualSystem=false
-inChina=false
 need_rust=false
 need_js=false
 need_c=false
@@ -46,7 +46,7 @@ if $isNewSystem; then
     echo "installing new system"
     bash ${scriptPath}gene_ssh_key.sh
 
-    if $inChina; then
+    if $inChina && ! $inCloud; then
         bash ${scriptPath}cnSource.sh
     fi
 
