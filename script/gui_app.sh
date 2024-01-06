@@ -1,8 +1,12 @@
 
+sudo add-apt-repository multiverse
+sudo apt-get update
+
 echo "=======installing gui app========="
 mkdir -p ~/Documents/app
 cd ~/Documents/app/
-sudo add-apt-repository multiverse
+
+sudo apt install -y zsh
 
 #tldr
 pip3 install tldr
