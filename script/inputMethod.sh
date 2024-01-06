@@ -7,6 +7,7 @@ sudo apt-get install ibus-rime
 ibus restart
 
 mkdir -p ~/.config/ibus/rime
+rm -rf ~/.config/ibus/rime/*
 git clone https://github.com/iDvel/rime-ice.git ~/.config/ibus/rime
 
 # 部署配置文件
