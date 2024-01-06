@@ -1,7 +1,7 @@
 echo "=======installing chinese input method========="
 tech="https://blog.csdn.net/qq_44700366/article/details/121446162"
 #install rime
-sudo apt-get install ibus-rime
+sudo apt-get install -y ibus-rime
 
 #config by : https://github.com/iDvel/rime-ice
 ibus restart

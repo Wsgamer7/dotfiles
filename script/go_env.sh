@@ -1,3 +1,3 @@
 
 echo "=======installing go_env========="
-sudo apt install golang-go
+sudo apt install -y golang-go
