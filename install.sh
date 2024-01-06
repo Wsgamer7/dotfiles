@@ -70,9 +70,9 @@ if $isNewSystem; then
         if $inChina; then
             bash ${scriptPath}inputMethod.sh
         fi
+        if $dualSystem; then
+            bash ${scriptPath}fixTime2sys.sh
+        fi
     fi
 
-    if $dualSystem; then
-        bash ${scriptPath}fixTime2sys.sh
-    fi
 fi
