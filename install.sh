@@ -8,7 +8,6 @@ bash ~/dotfiles/config/install.sh
 homePath=$HOME
 #Optional
 isNewSystem=false
-need_ssh_key=true
 haveGUI=true
 inChina=true
 inCloud=false
@@ -21,6 +20,7 @@ need_go=true
 need_postgresql=true
 need_docker=true
 need_miniconda=true
+need_ssh_key=true
 
 #################################
 scriptPath="${homePath}/dotfiles/script/"
