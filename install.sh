@@ -8,6 +8,7 @@ bash ~/dotfiles/config/install.sh
 homePath=$HOME
 #Optional
 isNewSystem=false
+need_ssh_key=true
 haveGUI=true
 inChina=true
 inCloud=false
@@ -25,10 +26,6 @@ need_miniconda=true
 scriptPath="${homePath}/dotfiles/script/"
 echo $scriptPath
 install_program_env() {
-    if $need_rust; then
-        bash ${scriptPath}rust_env.sh
-    fi
-
     if $need_js; then
         bash ${scriptPath}js_env.sh
     fi
@@ -39,6 +36,10 @@ install_program_env() {
 
     if $need_go; then
         bash ${scriptPath}go_env.sh
+    fi
+
+    if $need_rust; then
+        bash ${scriptPath}rust_env.sh
     fi
 
     if $need_postgresql; then
@@ -54,6 +55,9 @@ install_program_env() {
 
 if $isNewSystem; then
     echo "installing new system"
+    if $need_ssh_key; then
+        bash ${scriptPath}gene_ssh_key.sh
+    fi
     bash ${scriptPath}gene_ssh_key.sh
 
     if $inChina && ! $inCloud; then
