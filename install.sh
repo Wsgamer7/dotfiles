@@ -58,7 +58,6 @@ if $isNewSystem; then
     if $need_ssh_key; then
         bash ${scriptPath}gene_ssh_key.sh
     fi
-    bash ${scriptPath}gene_ssh_key.sh
 
     if $inChina && ! $inCloud; then
         bash ${scriptPath}cnSource.sh
@@ -80,3 +79,9 @@ if $isNewSystem; then
     fi
 
 fi
+
+ln -sf ~/dotfiles/.bashrc ~
+ln -sf ~/dotfiles/.zshrc ~
+ln -sf ~/dotfiles/.bash_profile ~
+
+bash ~/dotfiles/config/install.sh
