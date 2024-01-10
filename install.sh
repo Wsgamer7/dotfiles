@@ -1,18 +1,12 @@
 #!/bin/bash
-ln -sf ~/dotfiles/.bashrc ~
-ln -sf ~/dotfiles/.zshrc ~
-ln -sf ~/dotfiles/.bash_profile ~
-
-bash ~/dotfiles/config/install.sh
-
 homePath=$HOME
 #Optional
-isNewSystem=false
-haveGUI=true
+isNewSystem=true
+haveGUI=false
 inChina=true
 inCloud=false
-swapEscCaps=true
-dualSystem=true
+swapEscCaps=false
+dualSystem=false
 need_rust=true
 need_js=true
 need_c=true

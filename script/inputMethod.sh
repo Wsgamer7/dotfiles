@@ -1,19 +1,20 @@
-echo "=======installing chinese input method========="
-tech="https://blog.csdn.net/qq_44700366/article/details/121446162"
-#install rime
-sudo apt-get install -y ibus-rime
+sudo apt install -y fcitx5 \
+fcitx5-chinese-addons \
+fcitx5-frontend-gtk4 fcitx5-frontend-gtk3 fcitx5-frontend-gtk2 \
+fcitx5-frontend-qt5
 
-#config by : https://github.com/iDvel/rime-ice
-ibus restart
+# 下载词库文件
+wget https://github.com/felixonmars/fcitx5-pinyin-zhwiki/releases/download/0.2.4/zhwiki-20220416.dict
+# 创建存储目录
+mkdir -p ~/.local/share/fcitx5/pinyin/dictionaries/
+# 移动词库文件至该目录
+mv zhwiki-20220416.dict ~/.local/share/fcitx5/pinyin/dictionaries/
 
-mkdir -p ~/.config/ibus/rime
-rm -rf ~/.config/ibus/rime/*
-git clone https://github.com/iDvel/rime-ice.git ~/.config/ibus/rime
+echo "GTK_IM_MODULE DEFAULT=fcitx
+QT_IM_MODULE DEFAULT=fcitx
+XMODIFIERS DEFAULT=@im=fcitx
+SDL_IM_MODULE DEFAULT=fcitx" > ~/.pam_environment
 
-# 部署配置文件
-ibus-daemon -drx
 
-ibus restart
-
-echo "you need add input method in system setting -- [keybord]"
-echo "see $tech, if you fail"
+echo "https://zhuanlan.zhihu.com/p/508797663"
+im-config

@@ -1,5 +1,5 @@
 #Create a new directory and enter it
-function mk() {
+function mkdir_to() {
   mkdir -p "$@" && cd "$@"
 }
 
