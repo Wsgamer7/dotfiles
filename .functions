@@ -11,6 +11,17 @@ aliUp() {
 	aliyunpan upload $1 /temp
 }
 
+path_file() {
+	echo "$(cd "$(dirname -- "$1")" >/dev/null; pwd -P)/$(basename -- "$1")"
+}
+ln2launcher() {
+	echo "[Desktop Entry]\nType=Application\nTerminal=false" > ~/temp
+	echo "Name=$1" >> ~/temp
+	echo "Exec=$(cd "$(dirname -- "$1")" >/dev/null; pwd -P)/$(basename -- "$1")" >> ~/temp
+	desktop_file_path="$HOME/.local/share/applications"
+	mv -f ~/temp $desktop_file_path/$1.desktop
+	echo "desktop files is in $desktop_file_path"
+}
 ln2path() {
 	local target_file=$1
 	# Check if the target file exists
@@ -21,6 +32,15 @@ ln2path() {
 	ln -s $(pwd)/$target_file $HOME/.local/bin
 }
 
+ln2sys_path() {
+	local target_file=$1
+	# Check if the target file exists
+  	if [ ! -f "$target_file" ]; then
+    		echo "Error: Target file does not exist."
+    	return 1
+  	fi
+	sudo ln -s $(pwd)/$target_file /usr/local/bin
+}
 ln2desk() {
 	local target_file=$1
 	# Check if the target file exists
@@ -52,3 +72,4 @@ rename_recur() {
 str2md5() {
 	echo -n $1 | md5sum
 }
+
