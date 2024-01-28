@@ -4,4 +4,3 @@
 build/
 doc/*.txt
 doc/**/*.pdf
-ssh_config
