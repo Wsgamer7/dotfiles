@@ -12,7 +12,7 @@ need_js=true
 need_c=true
 need_go=true
 need_postgresql=true
-need_docker=true
+need_docker=false
 need_miniconda=true
 need_ssh_key=true
 
