@@ -1,11 +1,8 @@
-Host 43.143.183.11
-	HostName 43.143.183.11
-	User ws
-
 Host tx_ws
 	HostName 43.143.183.11
 	User ws
 	IdentityFile ~/.ssh/id_ed25519.pub
+	Port 22
 
 	#Host github.com
 	#Hostname ssh.github.com
