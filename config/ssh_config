@@ -4,8 +4,8 @@ Host tx_ws
 	IdentityFile ~/.ssh/id_ed25519.pub
 	#Port 22
 
-	#Host github.com
-	#Hostname ssh.github.com
-	#Port 443
-	#User git 
-	#ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
+Host github.com
+	Hostname ssh.github.com
+	Port 443
+	User git 
+	ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
