@@ -8,12 +8,12 @@ inCloud=false
 swapEscCaps=false
 dualSystem=false
 need_rust=true
-need_js=true
-need_c=true
-need_go=true
-need_postgresql=true
+need_js=false
+need_c=false
+need_go=false
+need_postgresql=false
 need_docker=false
-need_miniconda=true
+need_miniconda=false
 need_ssh_key=true
 
 #################################
