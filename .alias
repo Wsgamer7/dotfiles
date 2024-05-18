@@ -1,7 +1,7 @@
 alias vi="nvim"
 alias dc="cd"
 alias la="ls -a"
-alias ll="ls -l"
+alias ll="ls -lh"
 alias ..="cd .."
 alias ...="cd ../.."
 alias t="tmux"

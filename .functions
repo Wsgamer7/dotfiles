@@ -73,3 +73,8 @@ str2md5() {
 	echo -n $1 | md5sum
 }
 
+tex2docx() {
+	echo "exec:pandoc main.tex -o output.docx --filter pandoc-crossref -M tableEqns -M autoEqnLabels -t docx+native_numbering --number-sections --bibliography=ref.bib --citeproc --csl ieee-access.csl"
+	pandoc main.tex -o output.docx --filter pandoc-crossref -M tableEqns -M autoEqnLabels -t docx+native_numbering --number-sections --bibliography=ref.bib --citeproc --csl ieee-access.csl
+}
+
