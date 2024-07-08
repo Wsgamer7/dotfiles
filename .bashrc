@@ -1,6 +1,9 @@
 source ~/.bash_profile
 #rust env 
 
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ws/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
