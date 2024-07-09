@@ -74,8 +74,6 @@ if $isNewSystem; then
 
 fi
 
-ln -sf ~/dotfiles/.bashrc ~
 ln -sf ~/dotfiles/.zshrc ~
-ln -sf ~/dotfiles/.bash_profile ~
 
 bash ~/dotfiles/config/install.sh

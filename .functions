@@ -3,10 +3,6 @@ function mkdir_to() {
   mkdir -p "$@" && cd "$@"
 }
 
-psqlWith() {
-	sudo -u $1 psql
-}
-
 aliUp() {
 	aliyunpan upload $1 /temp
 }
@@ -14,14 +10,7 @@ aliUp() {
 path_file() {
 	echo "$(cd "$(dirname -- "$1")" >/dev/null; pwd -P)/$(basename -- "$1")"
 }
-ln2launcher() {
-	echo "[Desktop Entry]\nType=Application\nTerminal=false" > ~/temp
-	echo "Name=$1" >> ~/temp
-	echo "Exec=$(cd "$(dirname -- "$1")" >/dev/null; pwd -P)/$(basename -- "$1")" >> ~/temp
-	desktop_file_path="$HOME/.local/share/applications"
-	mv -f ~/temp $desktop_file_path/$1.desktop
-	echo "desktop files is in $desktop_file_path"
-}
+
 ln2path() {
 	local target_file=$1
 	# Check if the target file exists
@@ -41,27 +30,14 @@ ln2sys_path() {
   	fi
 	sudo ln -s $(pwd)/$target_file /usr/local/bin
 }
-ln2desk() {
-	local target_file=$1
-	# Check if the target file exists
-  	if [ ! -f "$target_file" ]; then
-    		echo "Error: Target file does not exist."
-    	return 1
-  	fi
-	ln -s $(pwd)/$target_file $HOME/Desktop
-}
+
 proj3_diff() {
 	python3 binary_to_hex_cpu.py $1 > student.out
 	python3 binary_to_hex_cpu.py $2 > reference.out
 	diff student.out reference.out
 }
 
-databaseURL() {
-	url='const mongoConnectionURL = "mongodb+srv://wsgamer7:catbookwsgamer7@cluster0.cykbnuq.mongodb.net/?retryWrites=true&w=majority";'
-  	name='const databaseName = "Cluster0";'
-	echo $url
-	echo $name
-}
+
 kill_lisener() {
 	kill -9 $(lsof -ti:$1)
 }
@@ -69,6 +45,7 @@ kill_lisener() {
 rename_recur() {
 	echo "fd js | xargs rename 's/\.js$/\.ts/'"
 }
+
 str2md5() {
 	echo -n $1 | md5sum
 }

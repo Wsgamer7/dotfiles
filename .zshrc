@@ -12,7 +12,7 @@ done
 #use vim keybind in zsh
 bindkey -v
 
-
+################################################################################################
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ws/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -43,3 +43,14 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# fasd
+eval "$(fasd --init auto)"
+
+
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+ eval "$(pyenv init -)"
+fi
