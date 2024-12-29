@@ -1,17 +1,4 @@
-Host tx_ws
-	Hostname 43.143.183.11
-	User ws
-	IdentityFile ~/.ssh/id_ed25519.pub
-	#Port 22
-
 Host az_faithai
 	Hostname 172.207.24.70
 	User ws
 	IdentityFile ~/.ssh/faithai0_key.pem
-
-Host github.com
-	Hostname ssh.github.com
-	Port 443
-	User git 
-	ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
-

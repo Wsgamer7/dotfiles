@@ -1,4 +1,3 @@
-
 inChina=true
 inCloud=false
 if $inChina && ! $inCloud; then

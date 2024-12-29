@@ -1,10 +1,10 @@
+# zsh
 export ZSH=$HOME/.oh-my-zsh
-
 ZSH_THEME="af-magic"
 zstyle ':omz:update' mode disabled
-
 source $ZSH/oh-my-zsh.sh
 
+# source dotfiles
 for dotfile in ~/dotfiles/.{env,functions,alias}
 do
 	[ -r "$dotfile" ] && source "$dotfile"
@@ -12,6 +12,20 @@ done
 #use vim keybind in zsh
 bindkey -v
 
+# path
+PATH=$PATH:~/.local/bin
+PATH=$PATH:/usr/local/go/bin:~/go/bin
+PATH=$PATH:~/.cargo/bin
+PATH=$PATH:/opt/homebrew/bin
+PATH=$PATH:~/flutter/bin
+PATH=$PATH:~/.gem/bin
+PATH=$PATH:/opt/homebrew/opt/ruby/bin
+
+export HOMEBREW_NO_AUTO_UPDATE=1
+export ALIYUNPAN_CONFIG_DIR=~/.config/aliyunpan
+export DENO_INSTALL="~/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+#auto generate env
 ################################################################################################
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -46,7 +60,6 @@ esac
 
 # fasd
 eval "$(fasd --init auto)"
-
 
 
 export PYENV_ROOT="$HOME/.pyenv"

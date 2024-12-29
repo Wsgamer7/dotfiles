@@ -1,13 +1,13 @@
-#Create a new directory and enter it
-function mkdir_to() {
+mkcd() {
   mkdir -p "$@" && cd "$@"
 }
 
-aliUp() {
-	aliyunpan upload $1 /temp
+gac() {
+    git add -A
+    git commit -m $1
 }
 
-path_file() {
+path() {
 	echo "$(cd "$(dirname -- "$1")" >/dev/null; pwd -P)/$(basename -- "$1")"
 }
 
@@ -21,7 +21,7 @@ ln2path() {
 	ln -s $(pwd)/$target_file $HOME/.local/bin
 }
 
-ln2sys_path() {
+ln2sysPath() {
 	local target_file=$1
 	# Check if the target file exists
   	if [ ! -f "$target_file" ]; then
@@ -31,23 +31,9 @@ ln2sys_path() {
 	sudo ln -s $(pwd)/$target_file /usr/local/bin
 }
 
-proj3_diff() {
-	python3 binary_to_hex_cpu.py $1 > student.out
-	python3 binary_to_hex_cpu.py $2 > reference.out
-	diff student.out reference.out
-}
 
-
-kill_lisener() {
+port_kill() {
 	kill -9 $(lsof -ti:$1)
-}
-
-rename_recur() {
-	echo "fd js | xargs rename 's/\.js$/\.ts/'"
-}
-
-str2md5() {
-	echo -n $1 | md5sum
 }
 
 tex2docx() {
@@ -55,3 +41,17 @@ tex2docx() {
 	pandoc main.tex -o output.docx --filter pandoc-crossref -M tableEqns -M autoEqnLabels -t docx+native_numbering --number-sections --bibliography=ref.bib --citeproc --csl ieee-access.csl
 }
 
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+	#proxy
+	proxy() {
+		export http_proxy="http://127.0.0.1:7890"
+		export https_proxy="http://127.0.0.1:7890"
+	}
+	unproxy() {
+		unset http_proxy
+		unset https_proxy
+	}
+	aliUp() {
+		aliyunpan upload $1 /temp
+	}
+fi
