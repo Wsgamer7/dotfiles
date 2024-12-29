@@ -5,43 +5,66 @@ zstyle ':omz:update' mode disabled
 source $ZSH/oh-my-zsh.sh
 
 # source dotfiles
-for dotfile in ~/dotfiles/.{env,functions,alias}
+for dotfile in $HOME/dotfiles/.{env,functions,alias}
 do
 	[ -r "$dotfile" ] && source "$dotfile"
 done
-#use vim keybind in zsh
+# use vim keybind in zsh
 bindkey -v
 
 # path
-PATH=$PATH:~/.local/bin
-PATH=$PATH:/usr/local/go/bin:~/go/bin
-PATH=$PATH:~/.cargo/bin
+PATH=$PATH:$HOME/.local/bin
+PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+PATH=$PATH:$HOME/.cargo/bin
 PATH=$PATH:/opt/homebrew/bin
-PATH=$PATH:~/flutter/bin
-PATH=$PATH:~/.gem/bin
+PATH=$PATH:$HOME/flutter/bin
+PATH=$PATH:$HOME/.gem/bin
 PATH=$PATH:/opt/homebrew/opt/ruby/bin
 
 export HOMEBREW_NO_AUTO_UPDATE=1
-export ALIYUNPAN_CONFIG_DIR=~/.config/aliyunpan
-export DENO_INSTALL="~/.deno"
+export ALIYUNPAN_CONFIG_DIR=$HOME/.config/aliyunpan
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
-#auto generate env
-################################################################################################
+
+#配置proxy、submod
+export GOPRIVATE=github.com/SYNR-AI/*
+go env -w GOPROXY="https://goproxy.cn,direct"
+# go env -w GOPRIVATE="*.everphoto.cn,github.com/SYNR-AI/*"
+go env -w GOSUMDB="sum.golang.google.cn"
+
+# fasd
+eval "$(fasd --init auto)"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ws/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/ws/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/ws/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/ws/miniconda3/bin:$PATH"
+        export PATH="/opt/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
+
+
 # <<< conda initialize <<<
 
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+ eval "$(pyenv init -)"
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -49,21 +72,14 @@ export NVM_DIR="$HOME/.nvm"
 
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /home/ws/.npm/_npx/6913fdfd1ea7a741/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/ws/.npm/_npx/6913fdfd1ea7a741/node_modules/tabtab/.completions/electron-forge.zsh
-# pnpm
-export PNPM_HOME="/home/ws/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# fasd
-eval "$(fasd --init auto)"
+[[ -f /Users/wangshuo/Library/Caches/pnpm/dlx/g4eumsy4pdkcpeekcc54bzeccq/19256c964fa-6cc6/node_modules/.pnpm/tabtab@2.2.2/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/wangshuo/Library/Caches/pnpm/dlx/g4eumsy4pdkcpeekcc54bzeccq/19256c964fa-6cc6/node_modules/.pnpm/tabtab@2.2.2/node_modules/tabtab/.completions/electron-forge.zsh           vv  
 
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
- eval "$(pyenv init -)"
-fi
+# bun completions
+[ -s "/Users/wangshuo/.bun/_bun" ] && source "/Users/wangshuo/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+[ -f "/Users/wangshuo/.ghcup/env" ] && . "/Users/wangshuo/.ghcup/env" # ghcup-env
