@@ -1,4 +1,13 @@
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+
+Host pc
+	HostName 192.168.1.110
+	User ws
+
 Host az_faithai
-	Hostname 172.207.24.70
+	HostName 172.207.24.70
 	User ws
 	IdentityFile ~/.ssh/faithai0_key.pem
+

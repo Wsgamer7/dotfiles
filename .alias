@@ -9,7 +9,7 @@ alias t_attach="tmux attach -t"
 alias t_detach="tmux detach"
 alias t_kill="tmux kill-session -t"
 alias ux="chmod u+x"
-alias postgres_psql="sudo -u postgres psql"
+
 alias mountWin="sudo mount /dev/nvme0n1p3 $HOME/Documents/win10"
 alias add_alias="vi ~/dotfiles/.alias; source ~/dotfiles/.alias"
 alias add_function="vi ~/dotfiles/.functions; source ~/dotfiles/.functions"
@@ -20,6 +20,8 @@ alias bfg="java -jar ~/Documents/app/bfg*.jar"
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias aliSync="aliyunpan sync start"
+    alias postgres_psql="sudo -u postgres psql"
 else
     alias chrome="open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --disable-web-security --user-data-dir=/tmp/chrome_dev_sess"
+    alias postgres_psql=psql postgres
 fi

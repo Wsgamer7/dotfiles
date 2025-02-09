@@ -20,6 +20,7 @@ PATH=$PATH:/opt/homebrew/bin
 PATH=$PATH:$HOME/flutter/bin
 PATH=$PATH:$HOME/.gem/bin
 PATH=$PATH:/opt/homebrew/opt/ruby/bin
+PATH=$PATH:/opt/homebrew/opt/postgresql@16/bin
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 export ALIYUNPAN_CONFIG_DIR=$HOME/.config/aliyunpan
