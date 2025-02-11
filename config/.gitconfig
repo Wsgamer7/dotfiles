@@ -9,3 +9,14 @@
 	discard = reset --hard
 [core]
 	excludesfile = /Users/wangshuo/.gitignore_global
+
+[diff]
+	tool = ksdiff
+	
+[difftool]
+    prompt = false
+
+[difftool "ksdiff"]
+	cmd = ksdiff  --partial-changeset "$LOCAL" "$REMOTE"
+    prompt = false
+
