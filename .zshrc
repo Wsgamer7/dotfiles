@@ -36,23 +36,6 @@ go env -w GOSUMDB="sum.golang.google.cn"
 # fasd
 eval "$(fasd --init auto)"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
-
-# <<< conda initialize <<<
-
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
@@ -61,11 +44,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
- eval "$(pyenv init -)"
-fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -75,12 +53,5 @@ export NVM_DIR="$HOME/.nvm"
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /Users/wangshuo/Library/Caches/pnpm/dlx/g4eumsy4pdkcpeekcc54bzeccq/19256c964fa-6cc6/node_modules/.pnpm/tabtab@2.2.2/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/wangshuo/Library/Caches/pnpm/dlx/g4eumsy4pdkcpeekcc54bzeccq/19256c964fa-6cc6/node_modules/.pnpm/tabtab@2.2.2/node_modules/tabtab/.completions/electron-forge.zsh           vv  
 
-
-# bun completions
-[ -s "/Users/wangshuo/.bun/_bun" ] && source "/Users/wangshuo/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 [ -f "/Users/wangshuo/.ghcup/env" ] && . "/Users/wangshuo/.ghcup/env" # ghcup-env
+
