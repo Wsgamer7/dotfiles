@@ -1,8 +1,0 @@
-#!/usr/bin/sh
-
-index="https://xueqiu.com/hq"
-money_direction="https://data.eastmoney.com/hsgt/hsgtV2.html"
-greed_index="https://funddb.cn/tool/fear"
-google-chrome --new-window $index
-google-chrome $money_direction
-google-chrome $greed_index
