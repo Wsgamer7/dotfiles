@@ -23,6 +23,9 @@ export PATH=$PATH:/opt/homebrew/bin
 
 export UV_DEFAULT_INDEX="https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 
+# disable homebrew auto update
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 #配置proxy、submod
 export GOPRIVATE=github.com/SYNR-AI/*
 go env -w GOPROXY="https://goproxy.cn,direct"
