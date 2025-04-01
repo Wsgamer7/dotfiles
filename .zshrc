@@ -49,3 +49,4 @@ esac
 
 [ -f "/Users/wangshuo/.ghcup/env" ] && . "/Users/wangshuo/.ghcup/env" # ghcup-env
 
+. "/Users/wangshuo/.deno/env"
