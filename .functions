@@ -41,6 +41,16 @@ tex2docx() {
 	pandoc main.tex -o output.docx --filter pandoc-crossref -M tableEqns -M autoEqnLabels -t docx+native_numbering --number-sections --bibliography=ref.bib --citeproc --csl ieee-access.csl
 }
 
+kafka_start() {
+	brew services start kafka
+	brew services start zookeeper
+}
+
+kafka_stop() {
+	brew services stop kafka
+	brew services stop zookeeper
+}
+
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	#proxy
 	proxy() {
@@ -55,3 +65,4 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 		aliyunpan upload $1 /temp
 	}
 fi
+
